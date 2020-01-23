@@ -41,6 +41,26 @@ function checkValue() {
   }
 }
 
-$(document).ready(function(){
-  checkValue();  
+function donationType() {
+  $(".buttonDonationType").on("click", function() {
+    $(this)
+      .attr("data-state", "active")
+      .siblings()
+      .attr("data-state", "inactive");
+    if ($("#buttonMonthly").attr("data-state") == "active") {
+      $("#recurringNotice").removeClass("toggle");
+    } else {
+      $("#recurringNotice").addClass("toggle");
+    }
+    if ($("#buttonHonour").attr("data-state") == "active") {
+      $("#tributeContainer").removeClass("toggle");
+    } else {
+      $("#tributeContainer").addClass("toggle");
+    }
+  });
+}
+
+$(document).ready(function() {
+  checkValue();
+  donationType();
 });

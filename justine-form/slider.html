@@ -27,45 +27,29 @@
             class="logo"
         /></a>
         <ul class="navLeftSteps">
-          <li class="step1"><span>01.</span>Type of donation</li>
+          <li class="step1 active"><span>01.</span>Type of donation</li>
           <li class="step2"><span>02.</span>Information</li>
           <li class="step3"><span>03.</span>Payment</li>
         </ul>
       </section>
-      <section id="donationForm" class="donationForm">
+      <section id="donationForm" class="column donationForm">
         <h2><span>01.</span>Type of donation</h2>
         <div id="donationTypes" class="row buttonGroup">
-          <button
-            id="buttonMonthly"
-            type="button"
-            class="buttonDonationType"
-            data-state="inactive"
-          >
+          <button id="buttonMonthly" type="button" class="buttonDonationType" data-state="inactive">
             Monthly Donation <br />
             <div class="heart">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 18">
                 <path
                   d="M15.2 0c-1.6 0-3.1.6-4.3 1.7l-.5.5-.4-.5C8.9.6 7.3 0 5.8 0s-3 .6-4.1 1.7c-2.2 2.2-2.2 5.7 0 7.8l.1.1 8.5 8.3c.2.2.4.2.6 0l7.9-7.7.6-.6c2.2-2.1 2.3-5.6.2-7.8l-.1-.1C18.3.6 16.8 0 15.2 0z"
-                  fill="#ed1a92"
-                ></path>
+                  fill="#ed1a92"></path>
               </svg>
             </div>
             <div class="subtext">The best way to support Sainte-Justine</div>
           </button>
-          <button
-            id="buttonOneTime"
-            type="button"
-            class="buttonDonationType"
-            data-state="active"
-          >
+          <button id="buttonOneTime" type="button" class="buttonDonationType" data-state="active">
             One Time donation
           </button>
-          <button
-            id="buttonHonour"
-            type="button"
-            class="buttonDonationType"
-            data-state="inactive"
-          >
+          <button id="buttonHonour" type="button" class="buttonDonationType" data-state="inactive">
             Donation in memory <br />
             or in honour
           </button>
@@ -106,8 +90,28 @@
             </div>
           </div>
         </div>
+        <div id="tributeContainer" class="tributeInfo offset toggle">
+          <div class="row">
+            <div id="tributeSelect" class="column formGroup">
+              <label for="tributeSelection">Tribute Information</label>
+              <input type="text" name="tributeSelection" id="tributeSelection">
+            </div>
+            <div id="tributeName" class="column formGroup">
+              <label for="HonoreeName">Honoree Name</label>
+              <input type="text" name="HonoreeName" id="HonoreeName">
+            </div>
+          </div>
+          <div id="sendCard" class="cardCheck">
+            <input type="checkbox" name="cardCheck" id="cardCheck">
+            <label for="cardCheck">I would like to send a card</label>
+          </div>
+        </div>
         <div class="btnContainer">
           <a href="#" id="submit" class="btn">Next</a>
+        </div>
+        <div id="recurringNotice" class="toggle textBox">
+          <p>Depending on your circumstances, you may be eligible to claim up to 50% of your contribution as a
+            charitable tax credit.</p>
         </div>
       </section>
     </div>

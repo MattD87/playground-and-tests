@@ -4,17 +4,8 @@ html {
 }
 
 body {
-  /* background: #f6f6f6; */
   font-family: 'Roboto', arial, Arial, 'Open Sans', Helvetica, sans-serif;
   line-height: 1.42857143;
-}
-
-section {
-  height: 50vh;
-}
-
-p {
-  margin-top: 30px;
 }
 
 input[type="text"] {
@@ -44,13 +35,19 @@ border: 2px solid #b6b3b3;
 
 .row {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   /* align-items: center; */
   width: 100%;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .offset {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   justify-content: space-between;
 }
 
@@ -75,6 +72,7 @@ border: 2px solid #b6b3b3;
 
 .navLeftSteps li {
   line-height: 1.6;
+  color: #ebeff3;
 }
 
 .navLeftSteps li::before {
@@ -84,7 +82,11 @@ border: 2px solid #b6b3b3;
   height: 30px;
   margin: 10px 7px;
   /* move this to visited/active once that's set up */
-  background-color: #003367; 
+  background-color: #ebeff3; 
+}
+
+.navLeftSteps li.active::before {
+  background-color: #003367;
 }
 
 .navLeftSteps li:last-child::after {
@@ -94,7 +96,11 @@ border: 2px solid #b6b3b3;
   height: 30px;
   margin: 10px 7px;
   /* move this to visited/active once that's set up */
-  background-color: #003367; 
+  background-color: #ebeff3;
+}
+
+.navLeftSteps li.active:last-child::after {
+  background-color: #003367;
 }
 
 .navLeftSteps li span {
@@ -102,13 +108,13 @@ border: 2px solid #b6b3b3;
   margin-right: 20px;
 }
 
+.active {
+  color: #003367 !important;
+}
+
 .donationForm {
   width: 85%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;  
   background: #f6f6f6;
   padding: 0 14%;
 }
@@ -153,6 +159,11 @@ border: 2px solid #b6b3b3;
   border: none;
   border-radius: 0;
   color: #f4cae2;
+  transition: all 0.3s;
+}
+
+.buttonDonationType:hover {
+  color: #ED1A92;
 }
 
 button[data-state="active"] {
@@ -313,4 +324,25 @@ button[data-state="active"] {
   cursor: pointer;
   padding: 20px;
   margin-bottom: 16px;
+}
+
+.textBox {
+  color: #666;
+  background: #eee;
+  border: 1px solid #ddd;
+  text-align: center;
+  max-width: 500px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.tributeInfo {
+  background: salmon;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle {
+  display: none;
 }
