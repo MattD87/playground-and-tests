@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./setup.css" />
+    <link rel="stylesheet" href="./styleSlider.css" />
+    <title>Donation Slider</title>
+  </head>
+  <body>
+    <div class="row">
+    <section id="progress" class="column progress">
+      <a href="#"><img src="https://secure.fchusj.org/formulaireCorpo/2018/img/Fondation_CHUSJ_logo.svg" alt="ALT TEXT HERE" class="logo"></a>
+      <ul class="navLeftSteps">
+        <li class="step1"><span>01.</span>Type of Donation</li>
+        <li class="step2"><span>02.</span>Information</li>
+        <li class="step3"><span>03.</span>Payment</li>
+      </ul>
+    </section>
+    <section id="donationForm" class="donationForm">
+      <div class="row offset">
+        <div class="slideContainer">
+          <input
+            type="range"
+            min="1"
+            max="5"
+            value="3"
+            class="slider"
+            id="myRange"
+            onclick="checkValue()"
+          />
+          <div class="sliderAmounts">
+            <span id="amt50" class="sliderAmt">$50</span>
+            <span id="amt75" class="sliderAmt">$75</span>
+            <span id="amt125" class="sliderAmt">$125</span>
+            <span id="amt500" class="sliderAmt">$500</span>
+            <span id="amt1000" class="sliderAmt">1000</span>
+          </div>
+          <!-- <p>Value: <span id="demo"></span></p> -->
+        </div>
+
+        <div class="customAmount">
+          <h2>Donation Amount / Other</h2>
+          <div class="amount">
+            <span class="dollar">$</span>
+            <input
+              name="custom-amount"
+              type="text"
+              id="custom"
+              class="customAmountInput"
+              placeholder=""
+              value=""
+              onclick="this.select()"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="btnContainer">
+        <a href="#" id="submit" class="btn next">Next</a>
+      </div>
+    </section>
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
