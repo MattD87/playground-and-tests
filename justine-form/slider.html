@@ -5,62 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <!-- Stylesheets-->
     <link rel="stylesheet" href="./setup.css" />
     <link rel="stylesheet" href="./styleSlider.css" />
+
+    <!-- Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Donation Slider</title>
   </head>
   <body>
     <div class="row">
-    <section id="progress" class="column progress">
-      <a href="#"><img src="https://secure.fchusj.org/formulaireCorpo/2018/img/Fondation_CHUSJ_logo.svg" alt="ALT TEXT HERE" class="logo"></a>
-      <ul class="navLeftSteps">
-        <li class="step1"><span>01.</span>Type of Donation</li>
-        <li class="step2"><span>02.</span>Information</li>
-        <li class="step3"><span>03.</span>Payment</li>
-      </ul>
-    </section>
-    <section id="donationForm" class="donationForm">
-      <div class="row offset">
-        <div class="slideContainer">
-          <input
-            type="range"
-            min="1"
-            max="5"
-            value="3"
-            class="slider"
-            id="myRange"
-            onclick="checkValue()"
-          />
-          <div class="sliderAmounts">
-            <span id="amt50" class="sliderAmt">$50</span>
-            <span id="amt75" class="sliderAmt">$75</span>
-            <span id="amt125" class="sliderAmt">$125</span>
-            <span id="amt500" class="sliderAmt">$500</span>
-            <span id="amt1000" class="sliderAmt">1000</span>
-          </div>
-          <!-- <p>Value: <span id="demo"></span></p> -->
+      <section id="progress" class="column progress">
+        <a href="#"
+          ><img
+            src="https://secure.fchusj.org/formulaireCorpo/2018/img/Fondation_CHUSJ_logo.svg"
+            alt="ALT TEXT HERE"
+            class="logo"
+        /></a>
+        <ul class="navLeftSteps">
+          <li class="step1"><span>01.</span>Type of donation</li>
+          <li class="step2"><span>02.</span>Information</li>
+          <li class="step3"><span>03.</span>Payment</li>
+        </ul>
+      </section>
+      <section id="donationForm" class="donationForm">
+        <h2><span>01.</span>Type of donation</h2>
+        <div id="donationTypes" class="row buttonGroup">
+          <button
+            id="buttonMonthly"
+            type="button"
+            class="buttonDonationType"
+            data-state="inactive"
+          >
+            Monthly Donation <br />
+            <div class="heart">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 18">
+                <path
+                  d="M15.2 0c-1.6 0-3.1.6-4.3 1.7l-.5.5-.4-.5C8.9.6 7.3 0 5.8 0s-3 .6-4.1 1.7c-2.2 2.2-2.2 5.7 0 7.8l.1.1 8.5 8.3c.2.2.4.2.6 0l7.9-7.7.6-.6c2.2-2.1 2.3-5.6.2-7.8l-.1-.1C18.3.6 16.8 0 15.2 0z"
+                  fill="#ed1a92"
+                ></path>
+              </svg>
+            </div>
+            <div class="subtext">The best way to support Sainte-Justine</div>
+          </button>
+          <button
+            id="buttonOneTime"
+            type="button"
+            class="buttonDonationType"
+            data-state="active"
+          >
+            One Time donation
+          </button>
+          <button
+            id="buttonHonour"
+            type="button"
+            class="buttonDonationType"
+            data-state="inactive"
+          >
+            Donation in memory <br />
+            or in honour
+          </button>
         </div>
-
-        <div class="customAmount">
-          <h2>Donation Amount / Other</h2>
-          <div class="amount">
-            <span class="dollar">$</span>
+        <div class="row offset">
+          <div class="slideContainer">
             <input
-              name="custom-amount"
-              type="text"
-              id="custom"
-              class="customAmountInput"
-              placeholder=""
-              value=""
-              onclick="this.select()"
+              type="range"
+              min="1"
+              max="5"
+              value="3"
+              class="slider"
+              id="myRange"
+              onclick="checkValue()"
             />
+            <div class="sliderAmounts">
+              <span id="amt50" class="sliderAmt">$50</span>
+              <span id="amt75" class="sliderAmt">$75</span>
+              <span id="amt125" class="sliderAmt">$125</span>
+              <span id="amt500" class="sliderAmt">$500</span>
+              <span id="amt1000" class="sliderAmt">1000</span>
+            </div>
+          </div>
+
+          <div class="customAmount">
+            <h2>Donation Amount / Other</h2>
+            <div class="amount">
+              <span class="dollar">$</span>
+              <input
+                name="custom-amount"
+                type="text"
+                id="custom"
+                class="customAmountInput"
+                placeholder=""
+                value=""
+                onclick="this.select()"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="btnContainer">
-        <a href="#" id="submit" class="btn next">Next</a>
-      </div>
-    </section>
+        <div class="btnContainer">
+          <a href="#" id="submit" class="btn">Next</a>
+        </div>
+      </section>
     </div>
 
     <!-- Jquery -->
