@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/99ab144771.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="setup.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="content-container">
+        <div class="footer-columns">
+          <!-- Newsletter -->
+          <div class="ft-column footer-newsletter">
+            <h3 class="heading heading-small">Sign up for the newsletter</h3>
+            <form action="#" method="post">
+              <div class="input-wrapper flex">
+                <input type="email" name="fields[form_email]" id="newsletter"
+                  onkeyup="this.setAttribute('value', this.value);" value="" placeholder="Email" required>
+                <button class="btn_submit icon-circle overlap" type="submit">
+                  <span class="icon">
+                    <i class="fas fa-paper-plane"></i>
+                  </span>
+                </button>
+              </div>
+            </form>
+            <div class="newsletter-success " style="display: none;">
+              <div class="heading thanks">Thank you</div>
+            </div>
+          </div>
+
+          <!-- Social Links-->
+          <div class="ft-column footer-socials">
+            <h3 class="heading heading-small">Follow us</h3>
+            <div class="socials flex">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="icon-circle overlap">
+                <span class="icon icon-linkedin">
+                  <i class="fab fa-linkedin"></i>
+                </span>
+              </a>
+              <a href="https://www.youtube.com" target="_blank" rel="noopener" class="icon-circle overlap">
+                <span class="icon icon-youtube">
+                  <i class="fab fa-youtube"></i>
+                </span>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener" class="icon-circle overlap">
+                <span class="icon icon-twitter">
+                  <i class="fab fa-twitter"></i>
+                </span>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener" class="icon-circle overlap">
+                <span class="icon icon-instagram">
+                  <i class="fab fa-instagram"></i>
+                </span>
+              </a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener" class="icon-circle overlap">
+                <span class="icon icon-facebook">
+                  <i class="fab fa-facebook"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Donation -->
+          <div class="ft-column footer-cta">
+            <h3 class="heading heading-small">Support us</h3>
+            <div class="donate-btn">
+              <a href="#" class="btn btn-box colour">
+                <span class="btn-inner">Donate</span>
+              </a>
+            </div>
+            <a href="#" class="donate-link link-underline link-colour">Online Fundraising</a><br>
+            <a href="#" class="donate-link link-underline link-colour">Upcoming Events</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="decoration-divider"></div>
+
+      <div class="links-wrapper footer-links flex">
+        <nav class="links-container footer-site-links flex">
+          <a href="#" target="_blank" class="footer-link link-underline">Home</a>
+          <a href="#" target="_blank" class="footer-link link-underline">About</a>
+          <a href="#" target="_blank" class="footer-link link-underline">Work for us</a>
+          <a href="#" target="_blank" class=" footer-link link-underline">News Releases</a>
+          <a href="#" target="_blank" class=" footer-link link-underline">Contact us</a>
+          <a href="#" target="_blank" class="footer-link link-underline">Privacy Policy</a>
+        </nav>
+        <div class="copyright">&copy; Company Name</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
